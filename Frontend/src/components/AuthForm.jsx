@@ -8,7 +8,7 @@ const AuthForm = () => {
         password: "",
     });
 
-    const loginUrl = "http://localhost:5000/api/auth/login"; // Correct API endpoint for login
+    const loginUrl = "https://task-managament-app-api.vercel.app/api/auth/login"; // Correct API endpoint for login
 
     const handleInput = (e) => {
         let name = e.target.name;
