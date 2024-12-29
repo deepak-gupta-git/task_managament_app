@@ -31,7 +31,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
 app.get("/", (req, res) => {
-    res.send("Hello From Backend")
+    res.json("Hello From Backend")
 })
 
 const PORT = process.env.PORT || 5000;
