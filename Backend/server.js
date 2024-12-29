@@ -6,10 +6,11 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: "task-managament-app.vercel.app",
+  origin: ["http://localhost:3000", "https://task-managament-app.vercel.app"], 
   methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
-  credentials: true
+  credentials: true 
 }));
+
 
 
 app.get("/", (req, res) => {
