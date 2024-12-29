@@ -20,7 +20,10 @@ const taskRoutes = require('./routes/task');
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: 'https://task-managament-app.vercel.app', credentials: true }));
+app.use(cors({ origin: 'https://task-managament-app.vercel.app', 
+methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
+credentials: true
+}));
 
 
 // MongoDB Connection
