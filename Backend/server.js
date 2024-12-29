@@ -5,10 +5,12 @@ const cors = require('cors');
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: 'https://task-managament-app-api.vercel.app', 
-methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
-credentials: true
+app.use(cors({
+  origin: "task-managament-app.vercel.app",
+  methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
+  credentials: true
 }));
+
 
 app.get("/", (req, res) => {
     res.status(200).send("Hello from Backend");
