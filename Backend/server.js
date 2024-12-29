@@ -14,7 +14,7 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: 'https://task-managament-app.vercel.app/login', credentials: true }));
+app.use(cors({ origin: 'https://task-managament-app.vercel.app', credentials: true }));
 
 
 // MongoDB Connection
