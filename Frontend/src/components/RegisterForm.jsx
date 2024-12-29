@@ -9,7 +9,7 @@ const RegisterForm = () => {
     password: "",
   });
 
-  const registerUrl = "http://localhost:5000/api/auth/register";
+  const registerUrl = "https://task-managament-app-api.vercel.app/api/auth/register";
 
   const handleInput = (e) => {
     const name = e.target.name;
