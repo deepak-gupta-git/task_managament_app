@@ -3,13 +3,19 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
 
+dotenv.config();
+const app = express();
+
+app.get("/", (req, res) => {
+    res.status(200).send("Hello from Backend");
+});
+
 // Routes
 const authRoutes = require('./routes/auth');
 const taskRoutes = require('./routes/task');
 
 
-dotenv.config();
-const app = express();
+
 
 
 // Middleware
@@ -30,9 +36,7 @@ mongoose.connect(mongoURI,
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', taskRoutes);
 
-app.get("/", (req, res) => {
-    res.json("Hello From Backend")
-})
+
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
