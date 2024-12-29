@@ -20,7 +20,7 @@ const taskRoutes = require('./routes/task');
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: 'https://task-managament-app.vercel.app/login', 
+app.use(cors({ origin: 'https://task-managament-app-api.vercel.app', 
 methods: "GET, POST, PUT, PATCH, DELETE, HEAD",
 credentials: true
 }));
